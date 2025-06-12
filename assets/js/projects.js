@@ -7,7 +7,7 @@ const localProjects = await fetchJSON("./assets/data/cristian_pencheff_projects.
 async function displayProjects() {
   const myRepositories = await fetchMyRepositories();
   const reposWithLangs = localProjects;
-  const filteredRepos = myRepositories.filter(repo => repo.homepage);
+  const filteredRepos = myRepositories.filter(repo => repo.homepage).reverse();
 
   for (const repo of filteredRepos) {
     try {
