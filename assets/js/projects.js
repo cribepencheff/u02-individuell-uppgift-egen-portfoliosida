@@ -14,7 +14,7 @@ async function displayProjects() {
       const languagesResponse = await fetch(repo.languages_url);
       const languages = await languagesResponse.json();
 
-      reposWithLangs.unshift({
+      reposWithLangs.push({
         id: repo.id,
         name: repo.name,
         description: repo.description,
